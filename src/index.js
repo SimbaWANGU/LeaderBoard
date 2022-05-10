@@ -16,7 +16,7 @@ import {
   footer,
 } from './modules/declarations.js';
 
-function component() {
+const component = () => {
   mainContainer.appendChild(title);
 
   headingDiv.appendChild(subTitle);
@@ -37,6 +37,6 @@ function component() {
   mainContainer.appendChild(mainSection);
   mainContainer.appendChild(footer);
   return mainContainer;
-}
+};
 
 document.body.appendChild(component());
