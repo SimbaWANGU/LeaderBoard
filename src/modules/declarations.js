@@ -24,34 +24,8 @@ const refreshButton = document.createElement('button');
 refreshButton.classList.add('refreshButton');
 refreshButton.innerText = 'Refresh';
 
-const unorderedListItem1 = document.createElement('li');
-unorderedListItem1.classList.add('unorderedListItem');
-unorderedListItem1.innerText = 'Name: 100';
-
-const unorderedListItem2 = document.createElement('li');
-unorderedListItem2.classList.add('unorderedListItem');
-unorderedListItem2.innerText = 'Name: 90';
-
-const unorderedListItem3 = document.createElement('li');
-unorderedListItem3.classList.add('unorderedListItem');
-unorderedListItem3.innerText = 'Name: 80';
-
-const unorderedListItem4 = document.createElement('li');
-unorderedListItem4.classList.add('unorderedListItem');
-unorderedListItem4.innerText = 'Name: 70';
-
-const unorderedListItem5 = document.createElement('li');
-unorderedListItem5.classList.add('unorderedListItem');
-unorderedListItem5.innerText = 'Name: 60';
-
 const unorderedList = document.createElement('ul');
 unorderedList.classList.add('unorderedList');
-
-unorderedList.appendChild(unorderedListItem1);
-unorderedList.appendChild(unorderedListItem2);
-unorderedList.appendChild(unorderedListItem3);
-unorderedList.appendChild(unorderedListItem4);
-unorderedList.appendChild(unorderedListItem5);
 
 const addScoresDisplay = document.createElement('div');
 addScoresDisplay.classList.add('addScoresDisplay');
