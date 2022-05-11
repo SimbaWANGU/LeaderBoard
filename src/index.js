@@ -26,26 +26,26 @@ const component = () => {
   refreshButton.addEventListener('click', () => {
     if (unorderedList.innerHTML === '') {
       refresh()
-      .then((response) => {
-        response.forEach((res) => {
-          const unorderedListItem = document.createElement('li');
-          unorderedListItem.classList.add('unorderedListItem');
-          unorderedListItem.innerText = `${res.user} : ${res.score}`;
-          unorderedList.appendChild(unorderedListItem);
-        })
-      })
+        .then((response) => {
+          response.forEach((res) => {
+            const unorderedListItem = document.createElement('li');
+            unorderedListItem.classList.add('unorderedListItem');
+            unorderedListItem.innerText = `${res.user} : ${res.score}`;
+            unorderedList.appendChild(unorderedListItem);
+          });
+        });
     } else {
       unorderedList.innerHTML = '';
       refresh()
-      .then((response) => {
-        response.forEach((res) => {
-        const unorderedListItem = document.createElement('li');
-        unorderedListItem.classList.add('unorderedListItem');
-        unorderedListItem.innerText = `${res.user} : ${res.score}`;
-        unorderedList.appendChild(unorderedListItem);
-      })
-    })
-  }
+        .then((response) => {
+          response.forEach((res) => {
+            const unorderedListItem = document.createElement('li');
+            unorderedListItem.classList.add('unorderedListItem');
+            unorderedListItem.innerText = `${res.user} : ${res.score}`;
+            unorderedList.appendChild(unorderedListItem);
+          });
+        });
+    }
   });
   headingDiv.appendChild(refreshButton);
 
