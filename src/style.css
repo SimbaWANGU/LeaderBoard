@@ -10,7 +10,9 @@ body {
 }
 
 .title {
-  margin-left: 8%;
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 .mainSection {
@@ -46,6 +48,7 @@ body {
 .subTitle {
   margin: auto;
   padding: 1%;
+  color: grey;
 }
 
 .refreshButton {
@@ -55,17 +58,30 @@ body {
   font-weight: bold;
   box-shadow: 2px 2px;
   padding: 0 10px 0 10px;
+  transition-duration: 0.4s;
+}
+
+.refreshButton:hover {
+  color: rgba(51, 49, 49, 0.507);
+  transform: scale(1.1);
+  border: 1px solid grey;
+}
+
+.refreshButton:active {
+  transform: scale(0.9);
 }
 
 .unorderedList {
-  border: 2px solid;
   list-style-type: none;
   padding-left: 0;
+  margin: auto;
   margin-top: 10px;
+  width: 80%;
+  text-align: center;
 }
 
 .unorderedList :nth-child(odd) {
-  background-color: rgba(128, 128, 128, 0.3);
+  background-color: rgba(231, 231, 231, 0.6);
 }
 
 .unorderedListItem {
@@ -73,14 +89,40 @@ body {
   font-size: 16px;
   padding-left: 5%;
   font-weight: 500;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  width: 100%;
+  animation: show 600ms 100ms cubic-bezier(0.38, 0.97, 0.56, 0.76) forwards;
+  opacity: 0;
+}
+
+@keyframes show {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .dataInput {
   line-height: 30px;
   margin-top: 10px;
   margin-bottom: 10px;
-  border: 2px solid;
   padding: 0 10px;
+  border: none;
+  background-color: rgba(231, 231, 231, 0.6);
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  transition-duration: 0.4s;
+}
+
+.dataInput:hover {
+  background-color: rgba(231, 231, 231, 0.99);
+}
+
+.dataInput:focus {
+  outline: none;
+  background-color: rgba(231, 231, 231, 0.99);
+  transform: scale(1.01);
 }
 
 .submitButton {
@@ -91,6 +133,17 @@ body {
   font-weight: bold;
   box-shadow: 2px 2px;
   padding: 0 10px 0 10px;
+  transition-duration: 0.4s;
+}
+
+.submitButton:hover {
+  color: rgba(51, 49, 49, 0.507);
+  transform: scale(1.1);
+  border: 1px solid grey;
+}
+
+.submitButton:active {
+  transform: scale(0.9);
 }
 
 .footer {
